@@ -98,7 +98,7 @@ apache_service_name: httpd
 
 Adjust `/home/student/lab_inventory/roles/apache/tasks/main.yml` to include tasks for Apache installation and service management:
 
-{% raw %}
+{% raw %} 
 
 ```yaml
 ---
@@ -133,12 +133,14 @@ Adjust `/home/student/lab_inventory/roles/apache/tasks/main.yml` to include task
   when: inventory_hostname in groups['web']
   notify: Reload Firewall
 ```
+{% endraw %}
 
 4. Implement Handlers:
 
 In `/home/student/lab_inventory/roles/apache/handlers/main.yml`, create a handler to restart firewalld if its configuration changes:
 
 {% raw %}
+
 ```yaml
 ---
 # handlers file for ansible-files/roles/apache
